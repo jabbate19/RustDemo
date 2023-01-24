@@ -11,12 +11,12 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).unwrap();
     // print!, println!, and format! all allow for format parameters via {}
-    println!("Hello, {}!", input);
+    println!("Hello, {}!", input.trim());
 
-    // Note how doing this would break the above println
-    let input2 = input;
-    // Do this to fix it
-    // let input2 = &input;
-    println!("Hello, {}!", input);
-    // Since we gave ownership of input to input2, it can no longer be used!
+    // // Note how doing this would break the above println
+    // let input2 = input;
+    // // Do this to fix it
+    // // let input2 = &input;
+    // println!("Hello, {}!", input);
+    // // Since we gave ownership of input to input2, it can no longer be used!
 }
